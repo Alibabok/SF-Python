@@ -1,0 +1,15 @@
+count = int(input('Пожалуйста введите количество приобритаемых билетов: '))
+summ = 0
+L = [int(input('Пожалуйста укажите возраст посетителя: ')) for i in range(count)]
+
+for i in L:
+  if i < 18:
+    summ = 0
+  elif 18 <= i < 25:
+    summ += 990
+  else:
+    summ += 1390
+if count <= 3:    
+  print(f'Сумма к оплате составит: {summ} р.')
+else:
+  print(f'Сумма к оплате с учетом скидки 10% составит: {summ - (summ / 100 * 10)} р.')
